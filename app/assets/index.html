@@ -1,0 +1,228 @@
+<!doctype html>
+<html class="no-js" lang="en-us">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Command line fun</title>
+    <meta name="description" content="VIM">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="shortcut icon" href="./favicon.ico">
+  </head>
+
+  <body>
+    <textarea id="source">
+class: slide-intro
+# Command line tric
+
+> Fun aliases in the command line
+
+
+
+
+
+---
+class: slide-intro
+# Changing directories
+---
+## dot aliases
+```
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias cd-="cd -"
+alias cdw="cd /var/www/"
+alias cdd="cd ~/.dotfiles"
+```
+---
+### 1. `m`arking a directory
+```
+m() {
+  mkdir -p ~/.marks
+  ln -s "$(pwd)" "~/.marks/$1"
+}
+```
+### 2. `j`umping to a directory
+```
+j() {
+  cd "~/.marks/$1"
+}
+```
+
+
+
+
+
+---
+class: slide-intro
+# Search
+---
+## Find a file
+```
+f() {
+  find . -type f -iname "*$1*"
+}
+```
+---
+## Find in files
+```
+alias ag='ag --context=2 --smart-case --pager="less -R"'
+```
+
+
+
+
+---
+class: slide-intro
+# Encoding
+---
+## Getting encoding
+```
+alias encoding="file -bi"
+```
+---
+## Converting encoding
+```
+# latin1 = iso-8859-1
+recode latin1..utf8 ./input.txt
+
+# latin2 = iso-8859-2
+recode latin2..utf8 ./input.txt
+```
+
+
+
+
+---
+class: slide-intro
+# HTTP
+---
+## Headers
+```
+curl -s -D - $1 -o /dev/null
+```
+---
+## Wget
+```
+# Disguise as IE 9 on Windows 7
+user_agent = Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+# Download everything, no matter what the robots.txt says
+robots = off
+# Random wait between request to look legit
+random_wait = on
+# Allow for resumable downloads
+continue = on
+```
+
+
+
+
+---
+class: slide-intro
+# Readability
+---
+## Html to text
+```
+readability
+```
+```
+html2text
+```
+---
+## JSON
+```
+jq
+```
+---
+## HTML
+```
+pup
+```
+
+
+---
+class: slide-intro
+# Download
+---
+## Videos
+```
+youtube-dl
+```
+```
+get-flash-video
+```
+---
+## Rapidshare and co.
+```
+plowdown
+```
+
+
+---
+class: slide-intro
+# Fun
+---
+## Langues
+```
+trans $1 -sp -b -d fr: &>/dev/null
+trans $1 -sp -b -d en: &>/dev/null
+```
+---
+## Weather
+```
+curl http://wttr.in/$1
+```
+---
+## Correcting
+```
+thefuck
+```
+
+
+
+
+
+---
+class: slide-questions, content-centered
+# Questions?
+
+<div class="contact">
+  <div class="part part-below part-mail" name="email">tim@<div class="part part-above part-website" name="website"><div class="part part-below part-twitter" name="twitter">pixelastic</div>.com</div></div>
+</div>
+---
+
+
+
+
+
+
+
+> # Video
+> gif-record
+> xrectsel
+> ffmpeg
+> # Image
+> darken, grey, tint, orientation
+> pngblack, pngmask, pngtrim
+> resize
+> jpgmin/pngmin
+> convert/mogrify
+
+
+    </textarea>
+    <script src="./js/remark-latest.min.js"></script>
+    <script>
+      var slideshow = remark.create();
+
+      // remove basic reveal styles
+      (function($) {
+        var head = $('head')[0];
+        var style = $('head style[title=remark]')[0];
+        head.removeChild(style);
+      })(document.querySelectorAll.bind(document));
+    </script>
+    <script src="app.js"></script>
+  </body>
+
+</html>
