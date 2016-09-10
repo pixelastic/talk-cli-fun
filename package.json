@@ -1,0 +1,33 @@
+{
+  "name": "talk-cli-fun",
+  "version": "0.0.1",
+  "description": "Having fun with the command line",
+  "author": "Tim \"pixelastic\" Carry",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:pixelastic/talk-cli-fun.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pixelastic/talk-cli-fun/issues"
+  },
+  "engines": {
+    "node": "0.10.21",
+    "npm": "1.3.11"
+  },
+  "scripts": {
+    "generate": "./scripts/generate",
+    "build": "./scripts/build",
+    "serve": "./scripts/serve",
+    "build:js": "./scripts/build-js",
+    "deploy": "./scripts/deploy"
+  },
+  "devDependencies": {
+    "auto-reload-brunch": "^2.0.0",
+    "brunch": "^2.4.2",
+    "sass-brunch": "^2.0.0",
+    "onchange": "^2.0.0",
+    "parallelshell": "^2.0.0"
+  },
+  "dependencies": {}
+}
