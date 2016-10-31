@@ -1,3 +1,4 @@
 #!/usr/bin/env sh
-npm run generate
+npm run build:html
 brunch build --production
+

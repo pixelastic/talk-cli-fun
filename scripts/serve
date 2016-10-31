@@ -1,8 +1,10 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-# Listen to any change in ./slides.md to rebuild the html
-# Note: We need to add a * character otherwise onchange works only twice
-# And listen with brunch
+# Listen to any change in ./app/html/ and rebuild the HTML from pug
+# if something changes...
+# ...while running the Brunch server at the same time
+# brunch watch
 parallelshell \
-  "onchange './slides*.md' -- npm run generate" \
+  "onchange 'app/html/**/*.pug' -- npm run build:html" \
   "brunch watch"
+

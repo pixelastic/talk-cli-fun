@@ -1,33 +1,45 @@
 @font-face {
-    font-family: 'AmaranthBold';
-    src: url('../fonts/AmaranthBold.eot');
-    src: url('../fonts/AmaranthBold.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/AmaranthBold.woff') format('woff'),
-         url('../fonts/AmaranthBold.ttf') format('truetype'),
-         url('../fonts/AmaranthBold.svg#amaranthregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Hack';
+  src: url('./fonts/hack-regular-webfont.eot?v=2.020');
+  src: url('./fonts/hack-regular-webfont.eot?#iefix&v=2.020') format('embedded-opentype'),
+       url('./fonts/hack-regular-webfont.woff2?v=2.020') format('woff2'),
+       url('./fonts/hack-regular-webfont.woff?v=2.020') format('woff'),
+       url('./fonts/hack-regular-webfont.ttf?v=2.020') format('truetype');
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'DejaVuSansMono';
-    src: url('../fonts/DejaVuSansMono.eot');
-    src: url('../fonts/DejaVuSansMono.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/DejaVuSansMono.woff') format('woff'),
-         url('../fonts/DejaVuSansMono.ttf') format('truetype'),
-         url('../fonts/DejaVuSansMono.svg#dejavusansmono') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Hack';
+  src: url('./fonts/hack-bold-webfont.eot?v=2.020');
+  src: url('./fonts/hack-bold-webfont.eot?#iefix&v=2.020') format('embedded-opentype'),
+       url('./fonts/hack-bold-webfont.woff2?v=2.020') format('woff2'),
+       url('./fonts/hack-bold-webfont.woff?v=2.020') format('woff'),
+       url('./fonts/hack-bold-webfont.ttf?v=2.020') format('truetype');
+  font-weight: 700;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'DejaVuSansMonoBold';
-    src: url('../fonts/DejaVuSansMonoBold.eot');
-    src: url('../fonts/DejaVuSansMonoBold.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/DejaVuSansMonoBold.woff') format('woff'),
-         url('../fonts/DejaVuSansMonoBold.ttf') format('truetype'),
-         url('../fonts/DejaVuSansMonoBold.svg#dejavusansmonobold') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Hack';
+  src: url('./fonts/hack-italic-webfont.eot?v=2.020');
+  src: url('./fonts/hack-italic-webfont.eot?#iefix&v=2.020') format('embedded-opentype'),
+       url('./fonts/hack-italic-webfont.woff2?v=2.020') format('woff2'),
+       url('./fonts/hack-italic-webfont.woff?v=2.020') format('woff'),
+       url('./fonts/hack-italic-webfont.ttf?v=2.020') format('truetype');
+  font-weight: 400;
+  font-style: italic;
 }
+
+@font-face {
+  font-family: 'Hack';
+  src: url('./fonts/hack-bolditalic-webfont.eot?v=2.020');
+  src: url('./fonts/hack-bolditalic-webfont.eot?#iefix&v=2.020') format('embedded-opentype'),
+       url('./fonts/hack-bolditalic-webfont.woff2?v=2.020') format('woff2'),
+       url('./fonts/hack-bolditalic-webfont.woff?v=2.020') format('woff'),
+       url('./fonts/hack-bolditalic-webfont.ttf?v=2.020') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
 

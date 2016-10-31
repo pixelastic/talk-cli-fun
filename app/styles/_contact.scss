@@ -1,0 +1,51 @@
+.c-contact {
+  position: relative;
+  // Name of the contact part
+  &:after {
+    content:attr(data-name);
+    position:absolute;
+    display:block;
+    right:0;
+    left:0;
+    text-align:center;
+    font-size:.4em;
+  }
+  // Ruler to show which part is selected
+  &:before {
+    content:"";
+    position:absolute;
+    display:block;
+    right:0;
+    left:0;
+    border:.05rem solid white;
+    height:.2rem;
+  }
+}
+
+.c-contact--email {
+  &:after {
+    bottom: -3.0em;
+  }
+  &:before {
+    top:1.2em;
+    border-top: none;
+  }
+}
+.c-contact--twitter {
+  &:after {
+    top: -1.9em;
+  }
+  &:before {
+    bottom:1.2em;
+    border-bottom: none;
+  }
+}
+.c-contact--website {
+  &:after {
+    top: -3.6em;
+  }
+  &:before {
+    bottom:1.9em;
+    border-bottom: none;
+  }
+}

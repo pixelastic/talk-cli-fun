@@ -1,0 +1,71 @@
+include ./partials/mixins.pug
+doctype html
+html(lang="en")
+  head
+    title Craftmanship, CSS and Vexillology
+    meta(name="description" content="TakeOffConf 2016")
+    meta(name="author" content="Tim Carry")
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+    link(rel='stylesheet', type='text/css', href='./main.css')
+    link(rel='shortcut icon', href='./favicon.ico')
+    <!--[if lt IE 9]>
+      script(src='./js/html5shiv.js')
+    <![endif]-->
+  body
+    .reveal
+      .slides.white.hack
+
+        include ./slides/home.pug
+        include ./slides/who-am-i.pug
+
+        // Configure shell
+        include ./slides/zsh.pug
+        include ./slides/colors.pug
+        include ./slides/prompt.pug
+
+
+        // Basics (makes the life easier)
+        include ./slides/find.pug
+        include ./slides/ag.pug
+        include ./slides/extract.pug
+        include ./slides/trash-cli.pug
+        include ./slides/tree.pug
+        include ./slides/typo-alias.pug
+        include ./slides/cd.pug
+        include ./slides/global-aliases.pug
+        include ./slides/mark-jump.pug
+        include ./slides/encoding.pug
+
+        // Really useful
+        include ./slides/pup.pug
+        include ./slides/jq.pug
+        include ./slides/when-changed.pug
+        include ./slides/http-server.pug
+
+        // HTTP debug
+        include ./slides/httpstats.pug
+        include ./slides/httpie.pug
+        include ./slides/header.pug
+
+        
+        // Sometimes useful
+        include ./slides/img2term.pug
+        include ./slides/say-dire.pug
+        include ./slides/plowshare.pug
+        include ./slides/youtube-dl.pug
+        
+        // Useless
+        include ./slides/thefuck.pug
+        include ./slides/img2css.pug
+        include ./slides/programminexcuses.pug
+
+
+        include ./slides/questions.pug
+
+  script(src='./js/head.min.js')
+  script(src='./js/reveal.js')
+  script(src='./app.js')
+  script require('javascripts/app').default.init()
+
